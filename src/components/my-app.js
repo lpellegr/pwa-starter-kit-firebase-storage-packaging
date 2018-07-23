@@ -23,6 +23,31 @@ import '@polymer/app-layout/app-toolbar/app-toolbar.js';
 import { menuIcon } from './my-icons.js';
 import './snack-bar.js';
 
+// Firebase import + initialization
+const firebase = window.firebase;
+
+firebase.initializeApp({
+    apiKey: "AIzaSyC4FZlx34ql_e6g5PWasi5synYgO_bnWLc",
+    authDomain: "test-e3c56.firebaseapp.com",
+    databaseURL: "https://test-e3c56.firebaseio.com",
+    projectId: "test-e3c56",
+    storageBucket: "test-e3c56.appspot.com",
+    messagingSenderId: "285580667492"
+});
+
+const auth = firebase.auth();
+const database = firebase.database();
+const firestore = firebase.firestore();
+const functions = firebase.functions();
+const storage = firebase.storage();
+
+console.log('FIREBASE', firebase);
+console.log('auth', auth);
+console.log('database', database);
+console.log('firestore', firestore);
+console.log('functions', functions);
+console.log('storage', storage);
+
 class MyApp extends LitElement {
   _render({appTitle, _page, _drawerOpened, _snackbarOpened, _offline}) {
     // Anything that's related to rendering should be done in here.

@@ -7,6 +7,8 @@
   "extraDependencies": [
     "manifest.json",
     "node_modules/@webcomponents/webcomponentsjs/**",
+    "node_modules/firebase/**",
+    "node_modules/@firebase/**",
     "push-manifest.json"
   ],
   "builds": [
